@@ -13,5 +13,7 @@ int main()
 	char array[3];
 	Arr x;
 	printf("%p, %p\n",&(x.d),&(x.a));
+	
+	array=3;
 
 }
