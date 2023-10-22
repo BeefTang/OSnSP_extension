@@ -30,25 +30,48 @@
 \begin{frame}{What array is}
   A consequtive memory space.
   Defining a array, the name refers to the forst element of the array.
+
+
+\end{frame}
+
+
+
+\begin{frame}{What point is?}
+A variable which has address as value. n bits in n system, and n is elementary unit on which CPU do computation.
+
+The syntax of the declaration for a variable mimics the syntax of expressions in which the variable might
+appear. The same idea idea also applies to function.(they are in the both "environment")
+\end{frame}
+
+\begin{frame}{Pointer and array: What "arr" is}
   %a[0]==*a; &a[0]==a;
+  the name of an array is a synonym for the location of the initial element
+
 
   a=... //not allowed, for a is not a lvalue
   lvalue is 
   Array is not pointer but reduced to pointer.
 
+
+  L-value (computer science), denoting an object to which values can be assigned
+  %Except when it is the operand of the sizeof operator, the _Alignof operator, or the unary & operator, or is a string literal used to initialize an array, an expression that has type ‘‘array of type’’ is converted to an expression with type "pointer to type" that points to the initial element of the array object and is not an lvalue. If the array object has register storage class, the behavior is undefined.
+
 \end{frame}
 
-\begin{frame}{What point is?}
-A variable which has address as value. n bits in n system, and n is elementary unit on which CPU do computation.
+\begin{frame}{Pointer and function: As arguments}
+  A way to manipulate data from last frame.
+
+  The principle of scanf: %https://sourceware.org/git/glibc.git
+  also for 
+
 \end{frame}
 
-\begin{frame}
-
-a=... //not allowed, for a is not a lvalue
-  lvalue is 
-  Array is not pointer but reduced to pointer.
-  
+\begin{frame}{Pointer and Array}
+fun(char a[]) and fun (char *a)
+%a is actually an pointer so sizeof(a) &a and &a+1 will be different.
 \end{frame}
+
+
 
 
 \section{Compound pointer}
