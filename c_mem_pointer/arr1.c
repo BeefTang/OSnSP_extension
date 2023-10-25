@@ -18,8 +18,12 @@ int main()
 {
 	char array[3];
 	Arr x;
+	array=3;
+	printf("%d\n",sizeof(int *));
 	printf("%p, %p, %p, %p\n",&array,array,array+1, &array+1);
 	fun(array);
+
+	array[3]='a';//compilable but error in urn time, 
 	
 	
 
