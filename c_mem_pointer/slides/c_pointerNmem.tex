@@ -98,7 +98,7 @@ Try some arithmetic on a.
 
 \section{When related to memory}
 
-\begin{frame}{Pointer Or Array as formal parameter}
+\begin{frame}{The memory layout}
   \begin{itemize}
     \item <1-> 
     int a=5;\\
@@ -116,7 +116,7 @@ Try some arithmetic on a.
 \section{Useful tricks}
 \begin{frame}{Useful tricks}
   \begin{itemize}
-  \item Simulating 2-dimensional array\\ \#define A(r, c) (A[(r)*WIDTH + (c)])
+  \item Simulating 2-dimensional array\\ \#define ARR(r, c) (ARR[(r)*WIDTH + (c)])
   \item flexible array member---struct hack
   \end{itemize}
 \end{frame}
