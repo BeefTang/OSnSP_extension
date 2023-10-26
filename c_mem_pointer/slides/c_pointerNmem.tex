@@ -24,14 +24,17 @@
 
 \section{Pointer, array and address}
 \begin{frame}{What address is?}
-  There is $2^m byte$ of memory, so m bits can represent the whole memory space. 
-  Every resident/cell is one byte. 
-  Normally 8 bytes of pointer---8*8=64 bits. $2^64=16 EiB$
-  "8 byte" is so intrinsic that it has a special name, doubleword. 4 bytes --- word
+  \begin{itemize}
+    \item <1->   There is $2^m bytes$ of memory, so m bits can represent the whole memory space. 
+    \item <2-> Every resident/cell is one byte.
+    \item<3-> Modern 8 bytes of size for pointer---8*8=64 bits. $2^64=16 EiB$
+    \item <4->  "8 byte" is so intrinsic that it has a special name, doubleword. 4 bytes --- word
+  \end{itemize}
+
 \end{frame}
 
 \begin{frame}{What array is}
-  A consequtive memory space.
+  A consecutive memory space.
   The name is synonymous to the address of the first element of the array.
 \end{frame}
 
@@ -92,31 +95,35 @@ fun(char a[]) and fun (char *a) is identical, not just synonymous.
 Try some arithmetic on a.
 \end{frame}
 
-\begin{frame}{Mulidimensional array}
-
-\end{frame}
-
-\begin{frame}{Some features}
-  Variable length array.
-  
-  f(const a[])
-
-  int sum2d(int rows, int cols, int ar[rows][cols])
-
-\end{frame}
 
 \section{When related to memory}
 
-int a;
-int b[3];
-int c; 
+\begin{frame}{Pointer Or Array as formal parameter}
+  \begin{itemize}
+    \item <1-> 
+    int a=5;\\
+    int b[3];\\
+    int c=6; 
+    \item <2-> b[-1]=0;\\Try
+    \item <3-> It is your duty to ensure legal access, not compiler's  
+    \item <4-> But runtime concerns, try b[3]=3
+  \end{itemize}
 
-b[-1]=0;
+\end{frame}
+
+
 
 \section{Useful tricks}
-%#define A(r, c) (A[(r)*WIDTH + (c)])
+\begin{frame}{Useful tricks}
+  \begin{itemize}
+  \item Simulating 2-dimensional array\\ \#define A(r, c) (A[(r)*WIDTH + (c)])
+  \item flexible array member---struct hack
+  \end{itemize}
+\end{frame}
 
-flexible struct
+
+
+
 
 
 \end{document}
